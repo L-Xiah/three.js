@@ -74,6 +74,7 @@ THREE.GLTFLoader = ( function () {
 
 					scope.parse( data, resourcePath, function ( gltf ) {
 
+                        gltf.url = url;
 						onLoad( gltf );
 
 						scope.manager.itemEnd( url );
@@ -227,6 +228,7 @@ THREE.GLTFLoader = ( function () {
 					animations: animations,
 					asset: json.asset,
 					parser: parser,
+					url:"",
 					userData: {}
 				};
 
